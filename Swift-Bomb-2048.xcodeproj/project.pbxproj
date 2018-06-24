@@ -13,6 +13,7 @@
 		263EE4E120DEA30C00FF422B /* Swift_Bomb_2048.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 263EE4DF20DEA30C00FF422B /* Swift_Bomb_2048.xcdatamodeld */; };
 		263EE4E320DEA30D00FF422B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 263EE4E220DEA30D00FF422B /* Assets.xcassets */; };
 		263EE4E620DEA30D00FF422B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 263EE4E420DEA30D00FF422B /* LaunchScreen.storyboard */; };
+		263EE4EE20DEA43400FF422B /* 2048-Algo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263EE4ED20DEA43400FF422B /* 2048-Algo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		263EE4E220DEA30D00FF422B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		263EE4E520DEA30D00FF422B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		263EE4E720DEA30D00FF422B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		263EE4ED20DEA43400FF422B /* 2048-Algo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "2048-Algo.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				263EE4D820DEA30C00FF422B /* AppDelegate.swift */,
 				263EE4DA20DEA30C00FF422B /* ViewController.swift */,
 				263EE4DC20DEA30C00FF422B /* Main.storyboard */,
+				263EE4ED20DEA43400FF422B /* 2048-Algo.swift */,
 				263EE4E220DEA30D00FF422B /* Assets.xcassets */,
 				263EE4E420DEA30D00FF422B /* LaunchScreen.storyboard */,
 				263EE4E720DEA30D00FF422B /* Info.plist */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				263EE4EE20DEA43400FF422B /* 2048-Algo.swift in Sources */,
 				263EE4DB20DEA30C00FF422B /* ViewController.swift in Sources */,
 				263EE4E120DEA30C00FF422B /* Swift_Bomb_2048.xcdatamodeld in Sources */,
 				263EE4D920DEA30C00FF422B /* AppDelegate.swift in Sources */,
@@ -285,13 +289,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9B74EE253N;
+				DEVELOPMENT_TEAM = T94BD3WX85;
 				INFOPLIST_FILE = "Swift-Bomb-2048/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Xim.Swift-Bomb-2048";
+				PRODUCT_BUNDLE_IDENTIFIER = "XimCN.Bomb-2048";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -303,13 +308,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9B74EE253N;
+				DEVELOPMENT_TEAM = T94BD3WX85;
 				INFOPLIST_FILE = "Swift-Bomb-2048/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Xim.Swift-Bomb-2048";
+				PRODUCT_BUNDLE_IDENTIFIER = "XimCN.Bomb-2048";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
