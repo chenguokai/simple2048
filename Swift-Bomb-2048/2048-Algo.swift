@@ -45,7 +45,7 @@ let multiArray = [2,4,8,16,32,64,128,256]
 func RandomNumber() -> Int {
     let t = RandomCustom(2, 128)
     for i in 0...6 {
-        if t < multiArray[i] {
+        if t > multiArray[i] {
             continue
         } else {
             return multiArray[6-i];

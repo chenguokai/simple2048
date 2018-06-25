@@ -287,13 +287,42 @@ class ViewController: UIViewController {
         }
         return false
     }
+    func EmptyArray() {
+        for i in 1...4 {
+            for j in 1...4 {
+                screenArray[i,j] = -1;
+            }
+        }
+        ScreenRefresh()
+        UIupdate()
+    }
     func Alert2048() {
         let alertcontroller = UIAlertController(title:"你获胜了",message:"得到2048",preferredStyle: .alert)
-        let alertaction1 = UIAlertAction(title:"确定", style: .default, handler: nil)
+        let alertaction1 = UIAlertAction(title:"重新开始", style: .default) { (action) in
+            self.EmptyArray()
+        }
         let alertaction2 = UIAlertAction(title:"取消", style: .default, handler: nil)
         alertcontroller.addAction(alertaction1);
         alertcontroller.addAction(alertaction2);
         self.present(alertcontroller,animated: true,completion: nil)
+    }
+    func AlertFail() {
+        let alertcontroller = UIAlertController(title:"你输了",message:"地图已经无法操作",preferredStyle: .alert)
+        let alertaction1 = UIAlertAction(title:"重新开始", style: .default) { (action) in
+            self.EmptyArray()
+        }
+        alertcontroller.addAction(alertaction1)
+        self.present(alertcontroller,animated: true,completion: nil)
+    }
+    func FullMap() -> Bool {
+        for i in 1...4 {
+            for j in 1...4 {
+                if screenArray[i,j] == -1 {
+                    return false
+                }
+            }
+        }
+        return true
     }
     @IBAction func DownButton(_ sender: Any) {
         MoveDown()
@@ -301,6 +330,9 @@ class ViewController: UIViewController {
         UIupdate()
         if Have2048() {
             Alert2048()
+        }
+        if FullMap() {
+            AlertFail()
         }
     }
     @IBAction func UpButton(_ sender: Any) {
@@ -310,6 +342,9 @@ class ViewController: UIViewController {
         if Have2048() {
             Alert2048()
         }
+        if FullMap() {
+            AlertFail()
+        }
     }
     @IBAction func LeftButton(_ sender: Any) {
         MoveLeft()
@@ -317,6 +352,9 @@ class ViewController: UIViewController {
         UIupdate()
         if Have2048() {
             Alert2048()
+        }
+        if FullMap() {
+            AlertFail()
         }
     }
     @IBAction func RightButton(_ sender: Any) {
@@ -326,20 +364,25 @@ class ViewController: UIViewController {
         if Have2048() {
             Alert2048()
         }
+        if FullMap() {
+            AlertFail()
+        }
     }
     
     
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        screenArray[0,0] = 1;
+    func ScreenRefresh() {
         while (screenArray[initx,inity] != -1) {
             initx = RandomCustom(1,4);
             inity = RandomCustom(1,4);
         }
         screenArray[initx,inity] = RandomNumber()
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        screenArray[0,0] = 1;
+        
         UIupdate();
     }
 
