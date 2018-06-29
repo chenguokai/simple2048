@@ -318,55 +318,71 @@ class ViewController: UIViewController {
         for i in 1...4 {
             for j in 1...4 {
                 if screenArray[i,j] == -1 {
+                    secondTime = 0
                     return false
                 }
             }
         }
+        secondTime += 1;
         return true
     }
+    var secondTime = 0
     @IBAction func DownButton(_ sender: Any) {
         MoveDown()
-        newGen()
-        UIupdate()
+        
         if Have2048() {
             Alert2048()
         }
-        if FullMap() {
+        if FullMap() && secondTime > 1 {
             AlertFail()
+            secondTime = 0
+        } else {
+            newGen()
+            UIupdate()
         }
+        
     }
     @IBAction func UpButton(_ sender: Any) {
         MoveUp()
-        newGen()
-        UIupdate()
+        
         if Have2048() {
             Alert2048()
         }
         if FullMap() {
             AlertFail()
+        } else {
+            newGen()
+            UIupdate()
         }
+        
     }
     @IBAction func LeftButton(_ sender: Any) {
         MoveLeft()
-        newGen()
-        UIupdate()
+        
         if Have2048() {
             Alert2048()
         }
         if FullMap() {
             AlertFail()
+        } else {
+            newGen()
+            UIupdate()
         }
+        
     }
     @IBAction func RightButton(_ sender: Any) {
         MoveRight()
-        newGen()
-        UIupdate()
+        
         if Have2048() {
             Alert2048()
         }
         if FullMap() {
             AlertFail()
+        } else {
+            newGen()
+            UIupdate()
         }
+        
     }
     
     
@@ -382,7 +398,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         screenArray[0,0] = 1;
-        
+        newGen();
         UIupdate();
     }
 

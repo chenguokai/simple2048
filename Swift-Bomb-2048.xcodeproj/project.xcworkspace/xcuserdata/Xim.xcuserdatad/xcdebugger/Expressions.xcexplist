@@ -3,6 +3,14 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "ViewController.FullMap():ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "screenArray">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "RandomNumber():2048-Algo.swift">
          <PersistentStrings>
             <PersistentString

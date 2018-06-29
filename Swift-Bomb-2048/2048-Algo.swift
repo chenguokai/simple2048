@@ -43,14 +43,11 @@ func RandomCustom(_ min: Int, _ max: Int) -> Int {
 }
 let multiArray = [2,4,8,16,32,64,128,256]
 func RandomNumber() -> Int {
-    let t = RandomCustom(2, 128)
-    for i in 0...6 {
-        if t > multiArray[i] {
-            continue
-        } else {
-            return multiArray[6-i];
-        }
+    let t = RandomCustom(2, 8)
+    if t < 5 {
+        return 2
+    } else {
+        return 4
     }
-    return 0;
 }
 
